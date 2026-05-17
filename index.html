@@ -3,6 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LGA Media | Randburg Internet Marketing Agency</title>
+    <meta
+      name="description"
+      content="LGA Media is an internet marketing agency based in Randburg offering design, lead generation, web development, and social media management."
+    />
+    <style>
+      :root {
+        --turquoise: #14d9d1;
+        --turquoise-deep: #08b9b2;
+        --white: #ffffff;
+        --ink: #042b33;
+        --ink-soft: #124e5a;
+        --bg: #eaffff;
+        --max: 1180px;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 10% 10%, #ffffff 0, #dfffff 40%, #cbfbf8 100%);
+      }
+      .container { width: min(var(--max), 92vw); margin: 0 auto; }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(8px);
+        background: color-mix(in srgb, white 75%, transparent);
+        border-bottom: 1px solid #9ee8e4;
+      }
+      nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+      .logo { font-size: 1.3rem; font-weight: 800; letter-spacing: .14em; }
+      .links { display: flex; gap: 1rem; font-weight: 600; }
+      .links a { padding: .45rem .65rem; border-radius: 999px; }
+      .links a:hover { background: #cff7f4; }
+
+      .hero {
+        padding: 2.5rem 0 4rem;
+      }
+      .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 1.5rem; align-items: stretch; }
+      .graphic-panel,
+      .hero-copy,
+      .panel,
+      .step,
+      .contact-card { border-radius: 24px; }
+
+      .graphic-panel {
+        min-height: 320px;
+        padding: 2rem;
+        color: var(--white);
+        background:
+          linear-gradient(150deg, rgba(8, 185, 178, .9), rgba(4, 43, 51, .82)),
+          radial-gradient(circle at 80% 20%, #8bf4ef 0, transparent 45%),
+          radial-gradient(circle at 15% 85%, #76fff8 0, transparent 35%);
+        position: relative;
+        overflow: hidden;
+      }
+      .graphic-panel::after {
+        content: "Welcome";
+        position: absolute;
+        right: -10px;
+        bottom: 10px;
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 800;
+        opacity: .14;
+      }
+      .graphic-panel h1 { margin: .5rem 0 .75rem; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; }
+
+      .hero-copy {
+        border: 2px solid #9de9e5;
+        background: #fff;
+        padding: 2rem;
+      }
+      .hero-copy p { color: var(--ink-soft); margin: 0; }
+      .slogan {
+        margin-top: 1rem;
+        padding: .9rem 1rem;
+        border-left: 6px solid var(--turquoise-deep);
+        font-weight: 800;
+        background: #e8fffd;
+      }
+
+      section { padding: 1.5rem 0 2.25rem; }
+      h2 { font-size: clamp(1.4rem, 3.5vw, 2.2rem); margin: 0 0 .8rem; }
+      .kicker { font-weight: 800; letter-spacing: .08em; color: var(--turquoise-deep); text-transform: uppercase; font-size: .8rem; }
+
+      .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .panel {
+        background: #fff;
+        border: 1px solid #a6ebe7;
+        box-shadow: 0 12px 25px rgba(20, 217, 209, .15);
+        padding: 1.3rem;
+      }
+      .panel h3 { margin: 0 0 .6rem; line-height: 1.15; }
+      .panel p { margin: 0 0 1rem; color: var(--ink-soft); }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        color: #005f67;
+        background: #ddfffd;
+        border: 1px solid #8de6e0;
+        border-radius: 999px;
+        padding: .55rem .95rem;
+      }
+
+      .band {
+        padding: 1.4rem;
+        background: linear-gradient(120deg, #12cdc5, #0e6f76);
+        color: white;
+        border-radius: 20px;
+        font-weight: 700;
+        letter-spacing: .02em;
+      }
+
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .step {
+        background: #ffffff;
+        border: 1px solid #9fe6e2;
+        padding: 1rem 1.1rem;
+      }
+      .step .num { font-size: 1.8rem; font-weight: 800; color: var(--turquoise-deep); margin: 0; }
+      .step h4 { margin: .25rem 0 .35rem; }
+      .step p { margin: 0; color: var(--ink-soft); }
+
+      .pricing {
+        background: #fff;
+        border: 1px solid #9de7e3;
+        padding: 1.3rem;
+        border-radius: 20px;
+      }
+
+      .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .contact-card {
+        background: white;
+        border: 1px solid #9be7e2;
+        padding: 1.3rem;
+      }
+      .contact-card input {
+        width: 100%;
+        padding: .7rem .8rem;
+        border: 1px solid #7ddcd6;
+        border-radius: 12px;
+        margin: .5rem 0;
+      }
+      .send {
+        border: 0;
+        background: linear-gradient(130deg, #10cbc2, #0f8e96);
+        color: white;
+        padding: .6rem 1rem;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+      footer { padding: 1.8rem 0 2.4rem; text-align: center; font-size: .92rem; color: #0c6f76; }
+
+      @media (max-width: 980px) {
+        .hero-grid, .service-grid, .about-grid, .steps, .contact-wrap { grid-template-columns: 1fr; }
+        .links { display: none; }
     <title>LGA Media | Story-Driven Digital Campaigns</title>
     <meta
       name="description"
@@ -179,6 +339,12 @@
     <header>
       <div class="container">
         <nav>
+          <div class="logo">LGA MEDIA</div>
+          <div class="links">
+            <a href="#what">What We Do</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+          </div>
           <a class="logo" href="#">LGA MEDIA</a>
           <div class="nav-links">
             <a href="#services">Services</a>
@@ -191,6 +357,67 @@
       </div>
     </header>
 
+    <main class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="graphic-panel">
+            <div class="kicker">lga media logo</div>
+            <h1>LGA MEDIA</h1>
+            <p>Background image that has the text <strong>“Welcome”</strong>.</p>
+          </div>
+          <div class="hero-copy">
+            <p>
+              We are an internet marketing agency based in Randburg. Our services include graphic design, lead generation, web development, social media content creation and social media management.
+            </p>
+            <p class="slogan">IF IT REPRESENTS YOUR BUSINESS WE CAN CREATE IT.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="what">
+        <p class="kicker">What We Do</p>
+        <h2>WHAT WE DO</h2>
+        <div class="service-grid">
+          <article class="panel">
+            <h3>DESIGN &amp;<br />ILLUSTRATION</h3>
+            <p>
+              We design all your printed media including flyers, stickers, packaging and Business Cards As well as digital media such as logos, websites digital posters and illustrations.
+            </p>
+            <a class="btn" href="#">Read More</a>
+          </article>
+          <article class="panel">
+            <h3>LEAD<br />GENERATION</h3>
+            <p>
+              We provide lead generation through SEO, gamification, interactive content, business networks and Facebook ADs.
+            </p>
+            <a class="btn" href="#">Read More</a>
+          </article>
+          <article class="panel">
+            <h3>ONLINE<br />PRESENCE</h3>
+            <p>
+              We help you establish build and maintain your online presence on any platform by providing essential web design and development service, social media content creation and social media managment.
+            </p>
+            <a class="btn" href="#">Read More</a>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="band">EMPOWERING YOUR BRAND THROUGH DESIGN, STRATEGY, AND CONSISTENCY</div>
+      </section>
+
+      <section>
+        <div class="about-grid">
+          <div class="panel">
+            <p class="kicker">Who Is</p>
+            <h2>LGA MEDIA</h2>
+            <p>OUR PROCESS IS DESIGNED TO WORK SEAMLESSLY WITH YOUR BUSINESS.</p>
+          </div>
+          <div class="panel">
+            <p class="kicker">Our Four Step Process</p>
+            <p>
+              We are a creative agency that caters to businesses of all size. Our services include graphic design, lead generation, web development, social media content creation and social media management.
+            </p>
     <main>
       <section class="hero">
         <div class="container hero-grid">
@@ -238,6 +465,18 @@
       </section>
 
       <section id="process">
+        <h2>OUR FOUR STEP PROCESS</h2>
+        <div class="steps">
+          <div class="step"><p class="num">1.</p><h4>DISCOVERY</h4><p>We start with a free 30-minute consultation to understand your brand, goals, and needs.</p></div>
+          <div class="step"><p class="num">2.</p><h4>PROPOSAL &amp; SIGN OFF</h4><p>Based on your needs, we'll suggest a subscription tier and send you a service agreement.</p></div>
+          <div class="step"><p class="num">3.</p><h4>BRAND ALIGNMENT</h4><p>We review your existing assets or create new branding elements (logo, CI, etc.)</p></div>
+          <div class="step"><p class="num">4.</p><h4>REVIEW &amp; REFINE</h4><p>We track performance, share reports, and meet monthly to adjust strategies that attract more clients.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="pricing">
+          LGA Media offers monthly subscription plans starting at just R1200, designed to provide businesses with consistent, high-quality creative support. Each plan includes essential services like logo design, weekly social media content, custom design work, and print materials, with higher tiers offering added benefits such as strategy meetings, performance reports, social media management, and priority turnaround times. Subscribing not only streamlines your brand's creative needs but can also save you up to 40% compared to once-off services.
         <div class="container">
           <h2 class="section-title">How we work</h2>
           <div class="process">
@@ -250,6 +489,20 @@
       </section>
 
       <section id="contact">
+        <div class="band">CONTACT US NOW<br />LET’S TAKE YOUR BRAND TO THE NEXT LEVEL—GET STARTED WITH US TODAY.</div>
+      </section>
+
+      <section>
+        <div class="contact-wrap">
+          <div class="contact-card">
+            <h3>Let's Get In Touch</h3>
+            <p>We'd love to have a chat with you about your vision and how we can help you achieve it. Don't hesitate to contact us.</p>
+          </div>
+          <div class="contact-card">
+            <h3>Subscribe to our Newsletter</h3>
+            <input type="email" placeholder="Enter Email" />
+            <button class="send">Send</button>
+          </div>
         <div class="container cta">
           <div>
             <h2 style="margin: 0 0 0.4rem">Ready to outgrow your current marketing?</h2>
@@ -260,6 +513,7 @@
       </section>
     </main>
 
+    <footer>© 2026 LGA Media. All Rights Reserved.</footer>
     <footer>
       <div class="container">© 2026 LGA Media · Built for performance-minded teams.</div>
     </footer>
